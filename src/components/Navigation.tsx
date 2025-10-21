@@ -38,12 +38,6 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <button
-            onClick={() => scrollToSection("hero")}
-            className="text-xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent hover:opacity-80 transition-opacity"
-          >
-            Portfolio
-          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
