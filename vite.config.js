@@ -1,14 +1,13 @@
+import path from "path"
 import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/watellephil.github.io/',  // ← IMPORTANT : remplacez par le nom exact de votre dépôt GitHub
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    rollupOptions: {
-      output: {
-        manualChunks: undefined
-      }
-    }
-  }
+  plugins: [react()],
+  base: '/watellephil.github.io/',  // Remplacez par le nom exact de votre repo
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
 })
