@@ -39,7 +39,7 @@ const Community = () => {
             className="h-20 w-20 mx-auto mb-6"
           />
           <h2 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-            Engagement communautaire
+            Engagements communautaires
           </h2>
         </div>
         <Card className="p-8 shadow-[var(--shadow-elegant)]">
