@@ -1,0 +1,98 @@
+\documentclass[11pt,a4paper]{moderncv}
+
+% THEME
+\moderncvstyle{classic}
+\moderncvcolor{green}
+
+% PACKAGES
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[absolute,overlay]{textpos}
+\usepackage[dvipsnames,x11names]{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+
+% PERSONAL DATA
+\name{Philippe-Olivier}{Watelle}
+\phone[mobile]{581-849-3115}
+\email{watellep@gmail.com}
+\social[linkedin]{philippe-olivier-watelle}
+\address{2019 rue Louis-A-Bélisle, Québec, QC}{}{}
+
+% GEOMETRY
+\geometry{a4paper, left=4.5cm, right=2cm, top=2.5cm, bottom=2.5cm}
+\setlength{\footskip}{40.8pt}
+
+\makeatletter
+\definecolor{lightgray}{gray}{0.9}
+\renewcommand*{\sectionstyle}[1]{%
+  \colorbox{lightgray}{\parbox{\dimexpr\linewidth-2\fboxsep}{\sectionfont\color{black}#1}}%
+}
+\makeatother
+
+% Custom command for skill bars
+\newcommand{\skillbar}[2]{%
+    \textcolor{gray}{#1} & 
+    \begin{tikzpicture}
+        \fill[gray!30] (0,0) rectangle (5,0.25);
+        \fill[color1] (0,0) rectangle (#2*5,0.25);
+    \end{tikzpicture} \\
+}
+
+\begin{document}
+
+\begin{textblock*}{\paperwidth}(0cm,0cm)
+\begin{tikzpicture}[remember picture,overlay]
+\fill[green,opacity=0.8] (current page.north west) rectangle ++(4cm,-29.7cm);
+\node at (2cm,-5cm) [circle, draw, thin, minimum size=4cm,
+    path picture={
+        \node[yshift=0.5cm] at (path picture bounding box.center){
+            \includegraphics[width=6cm]{moi.JPG}
+        };
+    }] {};
+\end{tikzpicture}
+\end{textblock*}
+
+\makecvtitle
+
+% SECTIONS
+\section{Études}
+\cventry{2025--}{Maîtrise en science politique - politique internationale}{Université Laval}{}{}{}
+\cventry{2022--2025}{Baccalauréat en science politique}{Université Laval}{}{}{}
+\cventry{2023--2024}{Certificat d'études politiques}{Science Po Bordeaux}{}{}{}
+\cventry{}{Programme sciences humaines, parcours Découverte}{Cégep de Sainte-Foy}{}{}{}
+\cventry{}{École De Rochebelle, programme PEI}{}{}{}{}
+
+\section{Emplois}
+\cventry{2025}{Responsable de bureau de vote}{Bureau du Directeur de scrutin de la Ville de Québec}{}{}{}
+\cventry{2024--2025}{Conseiller en rétro information}{Ministère du Conseil Exécutif du Québec}{}{}{}
+\cventry{2023}{Agent touristique}{Québec Cité}{}{}{}
+\cventry{2023}{Cuisinier}{Sapristi Champlain}{}{}{}
+\cventry{2019--2022}{Boulanger}{B\"ugel La Fabrique de Bagels}{}{}{}
+\cventry{2022--2025}{Surveillant}{Ville de Québec}{}{}{}
+\cventry{2021}{Livreur}{Uber Eats}{}{}{}
+\cventry{2019}{Plongeur}{B\"ugel, La Fabrique de Bagels}{}{}{}
+\cventry{2018--2019}{Arbitre de soccer}{Club de soccer des Caravelles de Sainte-Foy}{}{}{}
+\cventry{2017 \& 2021}{Assistant logistique}{Bureau du Directeur de scrutin de la Ville de Québec}{}{}{}
+
+\section{Bénévolat}
+\cventry{2023--2024}{Bénévole}{Linkee Bordeaux}{}{}{}
+\cventry{2020}{Bénévole}{Librairie-café Le Mot de tasse}{}{}{}
+\cventry{2018}{Coach}{Club de soccer des Caravelles de Sainte-Foy}{}{}{}
+\cventry{2015--2017}{Bénévole}{Carnaval d'hiver de Québec}{}{}{}
+\cventry{2016}{Bénévole}{Bibliothèque de l'école primaire Saint-Michel à Sillery}{}{}{}
+\cventry{2014}{Bénévole}{Héma-Québec}{}{}{}
+
+\section{Langues}
+\begin{tabular}{l l}
+\skillbar{Français (langue maternelle)}{1.0}
+\skillbar{Anglais (avancé)}{0.8}
+\skillbar{Espagnol (intermédiaire)}{0.5}
+\end{tabular}
+
+\end{document}
