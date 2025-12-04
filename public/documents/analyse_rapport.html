@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Analyse de l’impact des politiques d’interdiction de l’usage du cellulaire à l’école</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="analyse_rapport_files/libs/clipboard/clipboard.min.js"></script>
+<script src="analyse_rapport_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="analyse_rapport_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="analyse_rapport_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="analyse_rapport_files/libs/quarto-html/popper.min.js"></script>
+<script src="analyse_rapport_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="analyse_rapport_files/libs/quarto-html/anchor.min.js"></script>
+<link href="analyse_rapport_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="analyse_rapport_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="analyse_rapport_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="analyse_rapport_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="analyse_rapport_files/libs/bootstrap/bootstrap-9e3ffae467580fdb927a41352e75a2e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Analyse de l’impact des politiques d’interdiction de l’usage du cellulaire à l’école</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="question-de-recherche" class="level2">
+<h2 class="anchored" data-anchor-id="question-de-recherche">Question de recherche</h2>
+<p>Est-ce que les politiques d’interdiction de l’usage du cellulaire à l’école au Québec, en Ontario, en France et aux Pays-Bas favorise le climat et la performance scolaire?</p>
+</section>
+<section id="revue-de-la-littérature" class="level2">
+<h2 class="anchored" data-anchor-id="revue-de-la-littérature">Revue de la littérature</h2>
+<p>Les recherches récentes montrent que les interdictions de cellulaire à l’école contribuent à un environnement plus calme, réduisent les distractions et favorisent de meilleures interactions sociales entre élèves. Les enseignants rapportent une meilleure concentration et une diminution des comportements perturbateurs (Böttger &amp; Zierer, 2024; Selwyn &amp; Aagaard, 2021). De plus, ces politiques peuvent réduire les cas de harcèlement, notamment le cyberharcèlement, ce qui améliore le sentiment de sécurité et le bien-être des élèves (Abrahamsson, 2024). Les interdictions de téléphones intelligents ont un effet significatif, mais modeste (<span class="math inline">\(d = 0.162\)</span>, <span class="math inline">\(p &lt; 0.05\)</span>) sur la performance académique et le bien-être social. Cet effet est plus prononcé dans le domaine du bien-être social que dans celui de la performance (Böttger &amp; Zierer, 2024), même si certaines études montrent des effets positifs et significatifs de l’interdiction du téléphone en classe sur la performance scolaire en mathématiques et en sciences (Beneito &amp; Vicente-Chirivella, 2022).</p>
+<p>Cependant, plusieurs études montrent que les effets de l’interdiction du téléphone restent ambigus et que, parfois, l’interdiction défavorise le climat scolaire. L’efficacité dépend fortement de la rigueur de l’application et de l’adhésion des élèves et du personnel. D’abord, la procédure pour interdire les téléphones était souvent lourde et créait des conflits entre les enseignants et les élèves (Grigic Magnusson et al., 2023). Aussi, les téléphones étaient déjà utilisés comme des outils pédagogiques importants et souvent ils étaient jugés comme plus pratiques, plus accessibles ou plus économiques que les ordinateurs portables fournis par l’école (Grigic Magnusson et al., 2023). Même lorsque les interdictions étaient bien respectées, les enseignants ont constaté que les ordinateurs portables de l’école devenaient une source de distraction tout aussi importante que les téléphones. De plus, les contournements de l’interdiction ont affecté la confiance qu’avaient les enseignants envers les élèves (Grigic Magnusson et al., 2023) et les interdictions ont parfois directement accru la détresse psychologique des élèves, notamment en France où 43 % des élèves déclarent ressentir de l’anxiété sans leur téléphone (Böttger &amp; Zierer, 2024).</p>
+</section>
+<section id="hypothèse" class="level2">
+<h2 class="anchored" data-anchor-id="hypothèse">Hypothèse</h2>
+<p>Les politiques d’interdiction de l’usage du cellulaire à l’école favorise le climat scolaire, mais n’ont pas d’effet sur les performances scolaires.</p>
+</section>
+<section id="outils-utilisés" class="level2">
+<h2 class="anchored" data-anchor-id="outils-utilisés">Outils utilisés</h2>
+<p><em>Google scholar</em> a été utilisé pour rechercher des articles scientifiques sur le sujet.</p>
+<p><em>Consensus</em> a permis de compléter la recherche d’article et de la systématiser.</p>
+<p><em>Zotero</em> a permis de stocker les références des articles retenus et permettra une gestion facile des références (citation et bibliographie).</p>
+<p><em>Gemini</em> a été utilisé pour traduction des passages de texte en anglais, pour résumer des articles scientifique afin de repérer plus rapidement les passages importants des articles sélectionné et pour corriger des fautes de français.</p>
+</section>
+<section id="collecte-de-données" class="level2">
+<h2 class="anchored" data-anchor-id="collecte-de-données">Collecte de données</h2>
+<p>Les données utilisées dans ce travail proviennent de bases de données en libre accès. Les données de PISA 2022 et TALIS 2024 ont été récupérées. Ce sont deux études de l’OCDE qui offrent un aperçu essentiel de l’état de l’éducation mondiale. PISA se concentre sur les élèves et TALIS sur les enseignants. Les bases de données sont facilement accessibles sur le site de l’OCDE. Pour télécharger les bases de données, il était impératif de remplir un court sondage sur notre projet académique.</p>
+</section>
+<section id="analyse-et-visualisation-des-données" class="level2">
+<h2 class="anchored" data-anchor-id="analyse-et-visualisation-des-données">Analyse et visualisation des données</h2>
+<p>Pour comprendre l’effet de l’interdiction du téléphone sur les performances scolaires, les données les plus intéressantes dans la base de données PISA étaient la performance en mathématiques et les réponses à la question suivante : Les étudiants sont-ils distraits en utilisant des ressources numériques ? (Jamais, quelques cours, la plupart des cours, tous les cours).</p>
+<p>Ainsi, un modèle de régression linéaire multiple a été calculé. Ce dernier cherche à quantifier la relation entre le score en mathématiques d’un élève et les différents niveaux de distraction perçue, tout en contrôlant pour nos quatre régions.</p>
+<p>Pour garantir que nos résultats de régression soient représentatifs de l’ensemble de la population étudiante, nous avons utilisé les poids fournis par la base de données PISA, ce qui assure que nos données représentent fidèlement la relation dans la population réelle.</p>
+<p>De plus, parce que PISA utilise un test complexe où aucun élève ne répond à toutes les questions, et afin d’obtenir une mesure fiable des compétences, PISA génère plusieurs estimations du niveau de compétence de chaque élève, appelées scores plausibles. Ainsi, nous avons effectué la régression sur les 10 scores plausibles pour suivre la méthodologie de l’OCDE.</p>
+<p>Voici les résultats, présentés sous la forme d’un tableau et d’un graphique :</p>
+<section id="tableau-de-régression" class="level3">
+<h3 class="anchored" data-anchor-id="tableau-de-régression">Tableau de régression</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="tableau_regression.png" class="img-fluid figure-img"></p>
+<figcaption>Tableau de régression</figcaption>
+</figure>
+</div>
+</section>
+<section id="graphique-de-régression" class="level3">
+<h3 class="anchored" data-anchor-id="graphique-de-régression">Graphique de régression</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="graphique_regression.png" class="img-fluid figure-img"></p>
+<figcaption>Graphique de régression</figcaption>
+</figure>
+</div>
+<p>Contre-intuitivement, dans toutes les régions, les élèves qui se disent distraits par les ressources numériques obtiennent un score en mathématiques prédit plus élevé que le groupe de référence qui se dit rarement ou jamais distrait par les téléphones. Notre analyse montre donc que l’interdiction des téléphones aurait des effets négatifs sur la performance scolaire.</p>
+<p>Pour comprendre l’effet de l’interdiction du téléphone sur le climat social, les données les plus intéressantes dans la base de données TALIS 2024 étaient les questions :</p>
+<p>TT4G34D : En pensant à l’utilisation des ressources et outils numériques pour l’apprentissage des élèves, dans quelle mesure êtes-vous d’accord ou en désaccord avec les affirmations suivantes → l’utilisation des ressources et outils numériques distrait les élèves de l’apprentissage.</p>
+<p>TT4G65A : Dans quelle mesure êtes-vous d’accord ou en désaccord avec les affirmations suivantes concernant ce qui se passe dans cette école → les enseignants et les élèves s’entendent généralement bien.</p>
+<p>Ainsi, notre variable indépendante est la perception des enseignants de la distraction causée par les ressources et outils numériques (dont font partie les téléphones) et notre variable dépendante, la qualité perçue de la relation enseignants-élèves. Puisque le codebook de la base de données TALIS 2024 n’est pas encore disponible, le Québec ne peut pas être explicitement repéré. De plus, l’Ontario n’a pas participé à l’étude. Ainsi, cette partie de l’analyse ne traitera que de la France et des Pays-Bas. Voici un graphique représentant un nuage de points de la distribution de la la distraction perçue et de la qualité de la relation enseignants-élèves avec une régression.</p>
+<iframe src="graphique_enseignant.html" width="1200px" height="600px" style="border:none;">
+</iframe>
+<p>Les résultats montrent que plus la distraction perçue est élevée, moins la qualité de la relation enseignants-élèves est bonne. Cependant, ces résultats sont très faibles, avec des pentes de seulement <span class="math inline">\(-0.04\)</span> pour la France et <span class="math inline">\(-0.03\)</span> pour les Pays-Bas. Notre analyse montre donc que l’interdiction des téléphones aurait des effets positifs, mais faibles, sur le climat scolaire.</p>
+</section>
+</section>
+<section id="outils-utilisés-1" class="level2">
+<h2 class="anchored" data-anchor-id="outils-utilisés-1">Outils utilisés</h2>
+<p><em>Gemini</em> a servi à chercher des données pertinentes dans les codebooks, à expliquer ces derniers et a permis de <em>vibecoder</em> pour l’analyse et la visualisation graphique.</p>
+<p><em>Gemini CLI</em> a été très utile pour insérer les graphiques dans ce fichier Markdown via des prompts.</p>
+<p><em>R</em> a permis d’importer les bases de données nécessaires à l’étude, de nettoyer les données et de créer les tableaux et graphiques.</p>
+<p><em>Les packages R</em> comme readr, haven, intsvy, et dplyr ont été utilisés pour importer et transformer les données. ggplot2, patchwork, modelsummary, purrr et gt ont été mobilisés pour la visualisation graphique et la mise en forme esthétique des résultats de régression. De plus, plotly a été utilisé pour transformer les graphiques ggplot2 en versions interactives.</p>
+</section>
+<section id="discussion" class="level2">
+<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
+<section id="conclusion-de-létude" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion-de-létude">Conclusion de l’étude</h3>
+<p>Pour conclure, notre hypothèse selon laquelle les politiques d’interdiction de l’usage du cellulaire à l’école favorisent le climat scolaire, mais n’ont pas d’effet sur les performances scolaires est infirmée. Nos analyses montrent que l’interdiction de l’usage du cellulaire à l’école favorise légèrement le climat scolaire, mais que les effets sur les performances scolaires sont négatifs.</p>
+</section>
+<section id="choix-généraux-des-outils" class="level3">
+<h3 class="anchored" data-anchor-id="choix-généraux-des-outils">Choix généraux des outils</h3>
+<p>L’utilisation du logiciel R est motivée par le plaisir d’utiliser un outil qui respecte la philosophie du logiciel libre. D’abord, R est intéressant puisqu’il est gratuit et donc très accessible. De plus, grâce à sa grande flexibilité, R est compatible avec plusieurs autres outils et langages. Il fut notamment très utile pour écrire ce fichier Markdown. R est aussi le logiciel d’analyse le plus utilisé dans le domaine des sciences sociales. De plus, la transparence et la réplicabilité de notre étude sont facilitées puisque R et ses packages sont open source.</p>
+<p>Gemini a été choisi surtout pour faciliter le codage en R lors de ce projet. De plus, Gemini est plutôt accessible puisqu’il est gratuit avec l’abonnement étudiant.</p>
+<p>Zotero et l’extension Google Chrome Zotero ont été choisis pour leur utilisation simple, leur flexibilité et leur adaptabilité, mais surtout parce que Zotero nous permet de faire, en trois clics, des bibliographies sans faute à tous les coups ! De plus, c’est de loin l’outil de gestion de références et de citations le plus utilisé dans le milieu universitaire, ce qui nous permet d’avoir accès à de grandes communautés où poser nos questions en cas de problèmes. Finalement, Zotero est open source, ce qui est un autre avantage.</p>
+</section>
+</section>
+<section id="bibliographie" class="level2">
+<h2 class="anchored" data-anchor-id="bibliographie">Bibliographie</h2>
+<p>Abrahamsson, S. (2024). <em>Smartphone Bans, Student Outcomes and Mental Health</em> (SSRN Scholarly Paper 4735240). Social Science Research Network. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4735240" class="uri">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4735240</a></p>
+<p>Beneito, P., &amp; Vicente-Chirivella, Ó. (2022). Banning mobile phones in schools : Evidence from regional-level policies in Spain. <em>Applied Economic Analysis</em>, <em>30</em>(90), 153‑175. <a href="https://doi.org/10.1108/AEA-05-2021-0112" class="uri">https://doi.org/10.1108/AEA-05-2021-0112</a></p>
+<p>Böttger, T., &amp; Zierer, K. (2024). To Ban or Not to Ban? A Rapid Review on the Impact of Smartphone Bans in Schools on Social Well-Being and Academic Performance. <em>Education Sciences</em>, <em>14</em>(8), 906. <a href="https://doi.org/10.3390/educsci14080906" class="uri">https://doi.org/10.3390/educsci14080906</a></p>
+<p>Campbell, M., Edwards, E. J., Pennell, D., Poed, S., Lister, V., Gillett-Swan, J., Kelly, A., Zec, D., &amp; Nguyen, T.-A. (2024). Evidence for and against banning mobile phones in schools : A scoping review. <em>Journal of Psychologists and Counsellors in Schools</em>, <em>34</em>(3), 242‑265. <a href="https://doi.org/10.1177/20556365241270394" class="uri">https://doi.org/10.1177/20556365241270394</a></p>
+<p>Grigic Magnusson, A., Ott, T., Hård af Segerstad, Y., &amp; Sofkova Hashemi, S. (2023). Complexities of Managing a Mobile Phone Ban in the Digitalized Schools’ Classroom. <em>Computers in the Schools</em>, <em>40</em>(3), 303‑323. <a href="https://doi.org/10.1080/07380569.2023.2211062" class="uri">https://doi.org/10.1080/07380569.2023.2211062</a></p>
+<p>Selwyn, N., &amp; Aagaard, J. (2021). Banning mobile phones from classrooms—An opportunity to advance understandings of technology addiction, distraction and cyberbullying. <em>British Journal of Educational Technology</em>, <em>52</em>(1), 8‑19. <a href="https://doi.org/10.1111/bjet.12943" class="uri">https://doi.org/10.1111/bjet.12943</a></p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const MyProjects = () => {
   return (
@@ -9,13 +8,13 @@ const MyProjects = () => {
           Mes projets
         </h2>
         <div className="flex justify-center">
-          <Link to="/projet-a">
+          <a href="/documents/analyse_rapport.html">
             <img 
               src="/documents/image_projet.webp" 
               alt="Image du projet A" 
               className="rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
             />
-          </Link>
+          </a>
         </div>
       </div>
     </section>
